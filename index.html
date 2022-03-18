@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>TGA BURSARY</title>
+<meta name="viewport" content="width=device-width ,initial scale=1"/>
+<link rel="stylesheet" type="text/css" href="B.css"/>
+<script src="load.js"></script>
+<style type="text/css">
+
+
+#form2{
+display:none;
+}
+main{
+background-color: turquoise;
+color:#0076ff;
+border-radius:17px ;
+border:5px solid #0076ff;
+}
+ul{
+list-style-type:none;
+}
+
+h1{
+transformation:uppercase;
+}
+#p1{
+font-size:25px;
+color:white;
+font-weight:600;
+}
+input,select{
+width:;
+border-bottom:3px solid blue;
+padding:2.6%;
+border-top:3px transparent;
+border-right:3px transparent;
+border-left:5px transparent;
+border-radius:6px
+}
+#saform{
+ 
+}
+#ur_place{
+
+display:none;
+}
+
+#school{
+display:none;
+}
+button{
+border:1px solid #0076ff;
+color: #0076ff;
+background-color:white;
+padding-top:8px;
+padding-bottom:8px;
+padding-left:8px;
+padding-right:8px;
+font-weight:600
+}
+h2{
+color:#0076ff;
+}
+button:hover{
+background-color:#0076ff;
+color:white;
+border-radius:7px
+}
+</style>
+</head>
+<body><center>
+<header>
+<h2>TGA BURSARIES APPLICATIONS</h2>
+</header>
+
+
+<main>
+<p id="p1"><i>1.IDENTITIES</i></p>
+
+<form action="registration.html" method="GET">
+<ul>
+<div id="saform">
+<li><b>IDENTITY NUMBER</b></li>
+<input type="number" placeholder="13 digists number"/>
+<br/>
+<br/>
+<li><b>FIRST NAME</b></li>
+<input type="text" required/>
+<br/>
+<br/>
+<li><b>MIDDLE NAME</b></li>
+<input type="text" />
+<br/>
+<br/>
+<li><b>SURNAME</b></li>
+<input type="text" required/>
+<br/>
+<br/>
+<li><b>DATE OF BIRTH</b></li>
+<input type="date" required/>
+<br/>
+<br/>
+<li><b>GENDER</b></li>
+<label>MALE
+<input type="radio" name="gender" required/>
+</label>
+<br/>
+<label>FEMALE</label>
+<input type="radio" name="gender"/>
+<br/>
+<label>OTHER</label>
+<input type="radio" name="gender"/>
+<br/>
+<br/>
+<li><b>UPLOAD DOCUMENTS</b></li>
+<input type="file" required/>
+<br/>
+<br/>
+
+<button onclick="page()">Next</button>
+
+</div>
+
+
+<div id="ur_place">
+<li><b>PROVINCE</b></li>
+<input type="text" required/>
+<br/>
+<br/>
+<li><b>CAPITAL CITY/TOWN</b></li>
+<input type="text" required/>
+<br/>
+<br/>
+<li><b>REGION</b></li>
+<input type="text" required/>
+<br/>
+<br/>
+<button onclick="pg()">Previous</button>
+<button onclick="page3()">Next Page</button>
+</div>
+
+
+<div id="school">
+<li><b>EMAIL</b></li>
+<input type="email" required/>
+<br/>
+<br/>
+<li><b>USERNAME</b></li>
+<input type="text" required/>
+<br/>
+<br/>
+<li><b>PASSWORD</b></li>
+<input type="password" required/>
+<br/>
+<br/>
+<li><b>CONFIRM PASSWORD</b></li>
+<input type="password" required/>
+<br/>
+<br/>
+
+<li><b>SCHOOL NAME</b></li>
+<input type="text" required/>
+<br/>
+<br/>
+<li><b>GRADE</b></li>
+<select>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+</select>
+<br/>
+<br/>
+<li><b>CIRCUIT NAME</b></li>
+<input type="text" required/>
+<br/>
+<br/>
+<li><b>GRADE</b></li>
+<input type="number" required/>
+<br/>
+<br/>
+<li><b>TELL US MORE ABOUT YOURSELF</b></li>
+     <textarea rows="5" cols="35" placeholder="Tell why you want this bursary and more..." required></textarea>
+<br/>
+<label>
+<input type="checkbox" id="terms" onchange="trm(this)" value="1" /><a href="#">I have accepted the terms and conditions Of TGA </a>
+</label>
+<br/>
+<button onclick="pg()">FIRST</button>
+<button onclick="pg2()">PREVIOUS</button>
+<button type="reset">RESET EVERYTHING</button>
+<button type="submit"  id="submit_btn" disabled>REGISTER</button>
+<p>Already a member <a href="login.html"> HERE</a>
+</div>
+
+
+
+</form>
+</main>
+</center>
+<footer>
+<p>
+&copy;All rights reserved by the legends of tomorrow 2019-2021</p>
+</footer>
+<script type="text/javascript">
+function pg(){
+document.getElementById("p1").innerHTML="OHH YOU CAME BACK TO FIX YOUR MISTAKES THANKS";
+document.getElementById("p1").style.fontSize="13px";
+document.getElementById("p1").style.color="red";
+document.getElementById("saform").style.display="block";
+document.getElementById("ur_place").style.display="none";
+document.getElementById("school").style.display="none";
+}
+function page(){
+document.getElementById("p1").innerHTML="YOUR LOCALITY";
+document.getElementById("saform").style.display="none";
+document.getElementById("ur_place").style.display="block";
+}
+function page3(){
+document.getElementById("p1").innerHTML="LEARNING INFORMATION";
+document.getElementById("ur_place").style.display="none";
+document.getElementById("saform").style.display="none";
+document.getElementById("school").style.display="block";
+}
+
+function pg2(){
+document.getElementById("school").style.display="none";
+document.getElementById("saform").style.display="none";
+document.getElementById("ur_place").style.display="block";
+document.getElementById("p1").innerHTML="VERIFICATION IS ALSO A QUALIFICATION ";
+document.getElementById("p1").style.fontSize="13px";
+document.getElementById("p1").style.fontStyle="italic";
+}
+function  trm(CheckBox){
+    //If the checkbox has been checked
+    if(CheckBox.checked){
+        //Set the disabled property to FALSE and enable the button.
+        document.getElementById("submit_btn").disabled = false;
+    } else{
+        document.getElementById("submit_btn").disabled = true;
+    }
+}
+
+
+</script>
+</body>
+</html>

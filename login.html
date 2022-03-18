@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Bursary Login page</title>
+<meta name="viewport" content="width=device-width ,initial scale=1"/>
+<link rel="stylesheet" type="text/css" href="css/form.css"/>
+<style>
+body{
+background-color:powderblue
+}
+#log{
+border:2px solid white;
+margin-top:30%;
+border-radius:6px
+}
+#hy{
+font-weight:600;
+color:blue
+}
+#gh{
+padding-left:25px;
+padding-right:25px;
+}
+</style>
+</head>
+<body>
+<center>
+<div id="log">
+<form action="login.php" action="Post">
+<p id="hy"><big>TGA BURSARY</big></p>
+<ul>
+<li><b>USERNAME</b></li>
+<input type="text" required/>
+<br/>
+<br/>
+<li><b>PASSWORD</b></li>
+<input type="password" required/>
+<br/>
+<br/>
+<a href="forgot.html" style="float: right"><p>forgot your password?</p></a>
+<br/>
+<br/>
+<input type="checkbox" id="checkbox"  value="1" onchange="nok(this)"/>
+<br/>
+<button id="gh" type="submit" disabled>LOGIN</button>
+</ul>
+<br/>
+<br/>
+<p>Not a Member Sign up<a href="form.html"> here</a></p>
+<br/>
+<br/>
+</form>
+</div>
+</center>
+<script type="text/javascript">
+function nok(checkbox){
+if(checkbox.checked){
+document.getElementById("gh").disabled=false;
+}
+else{
+document.getElementById("gh").disabled=true;
+alert("Please accept terms and conditions to login");
+}
+}
+</script>
+</body>
+</html>
